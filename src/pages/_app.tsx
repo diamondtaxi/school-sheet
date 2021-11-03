@@ -1,10 +1,13 @@
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
 
-import "bootstrap/dist/css/bootstrap.css"
+import axios from "axios";
+import "bootstrap/dist/css/bootstrap.css";
 
-import '../styles/globals.css'
+import "../styles/globals.css";
+
+axios.defaults.baseURL = "https://mothercode.herokuapp.com/";
 
 function SchoolSheet({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+	return <Component {...pageProps} />;
 }
-export default SchoolSheet
+export default SchoolSheet;
